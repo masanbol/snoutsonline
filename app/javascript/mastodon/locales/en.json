@@ -297,6 +297,7 @@
   "status.pin": "Pin on profile",
   "status.pinned": "Pinned snoot",
   "status.reblog": "Boop",
+  "status.read_more": "Read more",
   "status.reblog_private": "Boop to original audience",
   "status.reblogged_by": "{name} booped",
   "status.reblogs.empty": "No one has booped this snoot yet. When someone does, they will show up here.",
