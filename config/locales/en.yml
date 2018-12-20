@@ -878,6 +878,7 @@ en:
     contrast: High contrast
     default: Mastodon
     mastodon-light: Mastodon (light)
+    snouts: Snouts
   time:
     formats:
       default: "%b %d, %Y, %H:%M"
