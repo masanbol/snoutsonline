@@ -1,0 +1,34 @@
+// Change the colors of button texts
+.button {
+  color: $white;
+
+  &.button-alternative-2 {
+    color: $white;
+  }
+  &.logo-button {
+    color: $white;
+  }
+}
+
+// Change the text colors on inverted background
+.privacy-dropdown__option.active .privacy-dropdown__option__content,
+.privacy-dropdown__option.active .privacy-dropdown__option__content strong,
+.privacy-dropdown__option:hover .privacy-dropdown__option__content,
+.privacy-dropdown__option:hover .privacy-dropdown__option__content strong,
+.dropdown-menu__item a:active,
+.dropdown-menu__item a:focus,
+.dropdown-menu__item a:hover,
+.actions-modal ul li:not(:empty) a.active,
+.actions-modal ul li:not(:empty) a.active button,
+.actions-modal ul li:not(:empty) a:active,
+.actions-modal ul li:not(:empty) a:active button,
+.actions-modal ul li:not(:empty) a:focus,
+.actions-modal ul li:not(:empty) a:focus button,
+.actions-modal ul li:not(:empty) a:hover,
+.actions-modal ul li:not(:empty) a:hover button,
+.admin-wrapper .sidebar ul ul a.selected,
+.simple_form .block-button,
+.simple_form .button,
+.simple_form button {
+  color: $white;
+}

@@ -1,6 +1,8 @@
-$ui-base-color: #191919;
-$ui-base-lighter-color: lighten($ui-base-color, 26%) !default;
-$ui-primary-color: #e6dddd;
-$ui-secondary-color: #e68787;
-$ui-highlight-color: #e68787;
-$primary-text-color: #e6dddd;
+$ui-base-color: #191919;   // base UI color for backgrounds, this is the color that shows up behind posts
+$ui-base-lighter-color: lighten($ui-base-color, 26%) !default;  // takes the base color and lightens it for other UI elements automagically
+$ui-primary-color: #e6dddd; // used for menu/page text and some dropdowns
+$ui-secondary-color: #e68787; // used for headers, links and some menu backgrounds
+$ui-highlight-color: #e68787; // used for buttons and other highly visible UI elements
+$primary-text-color: #efe9e9; // primary text color for posts
+$white: #ffffff;
+$black: #000000;
