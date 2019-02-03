@@ -109,7 +109,6 @@ class Account < ApplicationRecord
            :staff?,
            :locale,
            :hides_network?,
-           :shows_application?,
            to: :user,
            prefix: true,
            allow_nil: true
