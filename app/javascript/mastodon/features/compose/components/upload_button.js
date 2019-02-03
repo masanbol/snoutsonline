@@ -63,7 +63,7 @@ class UploadButton extends ImmutablePureComponent {
             key={resetFileKey}
             ref={this.setRef}
             type='file'
-            multiple
+            multiple={false}
             accept={acceptContentTypes.toArray().join(',')}
             onChange={this.handleChange}
             disabled={disabled}
