@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class Feed
-  include Redisable
-
   def initialize(type, id)
     @type = type
     @id   = id
@@ -28,5 +26,9 @@ class Feed
 
   def key
     FeedManager.instance.key(@type, @id)
+  end
+
+  def redis
+    Redis.current
   end
 end

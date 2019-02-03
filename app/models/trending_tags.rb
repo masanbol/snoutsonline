@@ -7,8 +7,6 @@ class TrendingTags
   THRESHOLD            = 5
 
   class << self
-    include Redisable
-
     def record_use!(tag, account, at_time = Time.now.utc)
       return if disallowed_hashtags.include?(tag.name) || account.silenced? || account.bot?
 
@@ -60,6 +58,10 @@ class TrendingTags
       @disallowed_hashtags = Setting.disallowed_hashtags.nil? ? [] : Setting.disallowed_hashtags
       @disallowed_hashtags = @disallowed_hashtags.split(' ') if @disallowed_hashtags.is_a? String
       @disallowed_hashtags = @disallowed_hashtags.map(&:downcase)
+    end
+
+    def redis
+      Redis.current
     end
   end
 end

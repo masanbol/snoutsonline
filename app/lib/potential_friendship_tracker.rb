@@ -11,8 +11,6 @@ class PotentialFriendshipTracker
   }.freeze
 
   class << self
-    include Redisable
-
     def record(account_id, target_account_id, action)
       return if account_id == target_account_id
 
@@ -32,6 +30,12 @@ class PotentialFriendshipTracker
       account_ids = redis.zrevrange("interactions:#{account_id}", offset, limit)
       return [] if account_ids.empty?
       Account.searchable.where(id: account_ids)
+    end
+
+    private
+
+    def redis
+      Redis.current
     end
   end
 end

@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class PostStatusService < BaseService
-  include Redisable
-
   MIN_SCHEDULE_OFFSET = 5.minutes.freeze
 
   # Post a text status update, fetch and notify remote users mentioned
@@ -110,6 +108,10 @@ class PostStatusService < BaseService
 
   def process_hashtags_service
     ProcessHashtagsService.new
+  end
+
+  def redis
+    Redis.current
   end
 
   def scheduled?

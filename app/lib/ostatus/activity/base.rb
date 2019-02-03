@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class OStatus::Activity::Base
-  include Redisable
-
   def initialize(xml, account = nil, **options)
     @xml     = xml
     @account = account
@@ -67,5 +65,9 @@ class OStatus::Activity::Base
       uri = "https://#{tag_matches[1]}/users/#{href_matches[1]}/statuses/#{tag_matches[2]}"
       Status.find_by(uri: uri)
     end
+  end
+
+  def redis
+    Redis.current
   end
 end

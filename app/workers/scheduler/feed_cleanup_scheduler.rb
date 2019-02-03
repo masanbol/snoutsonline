@@ -2,7 +2,6 @@
 
 class Scheduler::FeedCleanupScheduler
   include Sidekiq::Worker
-  include Redisable
 
   sidekiq_options unique: :until_executed, retry: 0
 
@@ -57,5 +56,9 @@ class Scheduler::FeedCleanupScheduler
 
   def feed_manager
     FeedManager.instance
+  end
+
+  def redis
+    Redis.current
   end
 end
