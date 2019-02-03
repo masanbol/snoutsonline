@@ -7,7 +7,6 @@ import { injectIntl, FormattedMessage } from 'react-intl';
 import Permalink from '../../../components/permalink';
 import ImmutablePureComponent from 'react-immutable-pure-component';
 import { HotKeys } from 'react-hotkeys';
-import Icon from 'mastodon/components/icon';
 
 const notificationForScreenReader = (intl, message, timestamp) => {
   const output = [message];
@@ -106,7 +105,7 @@ class Notification extends ImmutablePureComponent {
         <div className='notification notification-follow focusable' tabIndex='0' aria-label={notificationForScreenReader(intl, intl.formatMessage({ id: 'notification.follow', defaultMessage: '{name} followed you' }, { name: account.get('acct') }), notification.get('created_at'))}>
           <div className='notification__message'>
             <div className='notification__favourite-icon-wrapper'>
-              <Icon id='user-plus' fixedWidth />
+              <i className='fa fa-fw fa-user-plus' />
             </div>
 
             <span title={notification.get('created_at')}>
@@ -141,7 +140,7 @@ class Notification extends ImmutablePureComponent {
         <div className='notification notification-favourite focusable' tabIndex='0' aria-label={notificationForScreenReader(intl, intl.formatMessage({ id: 'notification.favourite', defaultMessage: '{name} favourited your status' }, { name: notification.getIn(['account', 'acct']) }), notification.get('created_at'))}>
           <div className='notification__message'>
             <div className='notification__favourite-icon-wrapper'>
-              <Icon id='star' className='star-icon' fixedWidth />
+              <i className='fa fa-fw fa-star star-icon' />
             </div>
 
             <span title={notification.get('created_at')}>
@@ -163,7 +162,7 @@ class Notification extends ImmutablePureComponent {
         <div className='notification notification-reblog focusable' tabIndex='0' aria-label={notificationForScreenReader(intl, intl.formatMessage({ id: 'notification.reblog', defaultMessage: '{name} boosted your status' }, { name: notification.getIn(['account', 'acct']) }), notification.get('created_at'))}>
           <div className='notification__message'>
             <div className='notification__favourite-icon-wrapper'>
-              <Icon id='retweet' fixedWidth />
+              <i className='fa fa-fw fa-retweet' />
             </div>
 
             <span title={notification.get('created_at')}>

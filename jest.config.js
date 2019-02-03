@@ -22,8 +22,4 @@ module.exports = {
     '!app/javascript/mastodon/test_setup.js',
   ],
   coverageDirectory: '<rootDir>/coverage',
-  moduleDirectories: [
-    '<rootDir>/node_modules',
-    '<rootDir>/app/javascript',
-  ],
 };
