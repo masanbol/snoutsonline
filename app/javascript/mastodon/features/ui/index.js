@@ -263,7 +263,7 @@ class UI extends React.PureComponent {
     this.setState({ draggingOver: false });
     this.dragTargets = [];
 
-    if (e.dataTransfer && e.dataTransfer.files.length === 1) {
+    if (e.dataTransfer && e.dataTransfer.files.length >= 1) {
       this.props.dispatch(uploadCompose(e.dataTransfer.files));
     }
   }
@@ -367,11 +367,16 @@ class UI extends React.PureComponent {
   handleHotkeyFocusColumn = e => {
     const index  = (e.key * 1) + 1; // First child is drawer, skip that
     const column = this.node.querySelector(`.column:nth-child(${index})`);
+    if (!column) return;
+    const container = column.querySelector('.scrollable');
 
-    if (column) {
-      const status = column.querySelector('.focusable');
+    if (container) {
+      const status = container.querySelector('.focusable');
 
       if (status) {
+        if (container.scrollTop > status.offsetTop) {
+          status.scrollIntoView(true);
+        }
         status.focus();
       }
     }
