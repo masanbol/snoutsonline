@@ -32,12 +32,12 @@ en:
     status_count_after:
       one: snoot
       other: snoots
-    status_count_before: Who made
-    tagline:  
+    status_count_before: Who booped
+    tagline: a furry fediverse home
     terms: Terms of service
     user_count_after:
-      one: user
-      other: users
+      one: friend
+      other: friends
     user_count_before: Home to
     what_is_mastodon: What is Mastodon?
   accounts:
@@ -67,7 +67,7 @@ en:
     roles:
       admin: Admin
       bot: Bot
-      moderator: Mod
+      moderator: Staff
     unavailable: Profile unavailable
     unfollow: Unfollow
   admin:
