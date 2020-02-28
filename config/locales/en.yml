@@ -1,50 +1,51 @@
 ---
 en:
   about:
-    about_hashtag_html: These are public snoots tagged with <strong>#%{hashtag}</strong>. You can interact with them if you have an account anywhere in the fediverse.
-    about_mastodon_html: snouts.online is a social network based on open web protocols and free, open-source software. No ads, no corporate surveillance.
+    about_hashtag_html: These are public toots tagged with <strong>#%{hashtag}</strong>. You can interact with them if you have an account anywhere in the fediverse.
+    about_mastodon_html: 'The social network of the future: No ads, no corporate surveillance, ethical design, and decentralization! Own your data with Mastodon!'
     about_this: About
     active_count_after: active
-    active_footnote: Monthly Active Snouts (MAS)
+    active_footnote: Monthly Active Users (MAU)
     administered_by: 'Administered by:'
     api: API
     apps: Mobile apps
-    apps_platforms: Use snouts.online from iOS, Android and other platforms
+    apps_platforms: Use Mastodon from iOS, Android and other platforms
     browse_directory: Browse a profile directory and filter by interests
-    browse_public_posts: Browse a live stream of public posts on the Fediverse
+    browse_local_posts: Browse a live stream of public posts from this server
+    browse_public_posts: Browse a live stream of public posts on Mastodon
     contact: Contact
     contact_missing: Not set
     contact_unavailable: N/A
     discover_users: Discover users
     documentation: Documentation
-    federation_hint_html: With an account on %{instance} you'll be able to follow people on other Fediverse instances too!
+    federation_hint_html: With an account on %{instance} you'll be able to follow people on any Mastodon server and beyond.
     get_apps: Try a mobile app
     hosted_on: Mastodon hosted on %{domain}
     instance_actor_flash: |
-      This account is a virtual actor used to represent the instance itself and not any individual user.
+      This account is a virtual actor used to represent the server itself and not any individual user.
       It is used for federation purposes and should not be blocked unless you want to block the whole instance, in which case you should use a domain block.
     learn_more: Learn more
     privacy_policy: Privacy policy
     see_whats_happening: See what's happening
-    server_stats: 'Instance stats:'
+    server_stats: 'Server stats:'
     source_code: Source code
     status_count_after:
-      one: snoot
-      other: snoots
-    status_count_before: Who booped
-    tagline: a furry fediverse home
+      one: status
+      other: statuses
+    status_count_before: Who authored
+    tagline: Follow friends and discover new ones
     terms: Terms of service
     unavailable_content: Unavailable content
     unavailable_content_description:
       domain: Server
       reason: Reason
-      rejecting_media: 'Media files from these instances will not be processed or stored, and and no thumbnails will be displayed, requiring manual click-through to the original file:'
-      silenced: 'Posts from these instances will be hidden in public timelines and conversations, and no notifications will be generated from their users'' interactions, unless you are following them:'
-      suspended: 'No data from these instances will be processed, stored or exchanged, making any interaction or communication with users from these instances impossible:'
-    unavailable_content_html: Mastodon generally allows you to view content from and interact with users from any other instance in the fediverse. These are the exceptions that have been made on this particular instance.
+      rejecting_media: 'Media files from these servers will not be processed or stored, and no thumbnails will be displayed, requiring manual click-through to the original file:'
+      silenced: 'Posts from these servers will be hidden in public timelines and conversations, and no notifications will be generated from their users'' interactions, unless you are following them:'
+      suspended: 'No data from these servers will be processed, stored or exchanged, making any interaction or communication with users from these servers impossible:'
+    unavailable_content_html: Mastodon generally allows you to view content from and interact with users from any other server in the fediverse. These are the exceptions that have been made on this particular server.
     user_count_after:
-      one: friend
-      other: friends
+      one: user
+      other: users
     user_count_before: Home to
     what_is_mastodon: What is Mastodon?
   accounts:
@@ -69,15 +70,16 @@ en:
     pin_errors:
       following: You must be already following the person you want to endorse
     posts:
-      one: Snoot
-      other: Snoots
-    posts_tab_heading: Snoots
-    posts_with_replies: Snoots and replies
+      one: Toot
+      other: Toots
+    posts_tab_heading: Toots
+    posts_with_replies: Toots and replies
     reserved_username: The username is reserved
     roles:
       admin: Admin
       bot: Bot
-      moderator: Staff
+      group: Group
+      moderator: Mod
     unavailable: Profile unavailable
     unfollow: Unfollow
   admin:
@@ -117,9 +119,7 @@ en:
       email_status: Email status
       enable: Enable
       enabled: Enabled
-      feed_url: Feed URL
       followers: Followers
-      followers_url: Followers URL
       follows: Follows
       header: Header
       inbox_url: Inbox URL
@@ -147,10 +147,8 @@ en:
       no_account_selected: No accounts were changed as none were selected
       no_limits_imposed: No limits imposed
       not_subscribed: Not subscribed
-      outbox_url: Outbox URL
       pending: Pending review
       perform_full_suspension: Suspend
-      profile_url: Profile URL
       promote: Promote
       protocol: Protocol
       public: Public
@@ -173,8 +171,8 @@ en:
         moderator: Moderator
         staff: Staff
         user: User
-      salmon_url: Salmon URL
       search: Search
+      search_same_ip: Other users with the same IP
       shared_inbox_url: Shared inbox URL
       show:
         created_reports: Made reports
@@ -200,11 +198,15 @@ en:
         change_email_user: "%{name} changed the e-mail address of user %{target}"
         confirm_user: "%{name} confirmed e-mail address of user %{target}"
         create_account_warning: "%{name} sent a warning to %{target}"
+        create_announcement: "%{name} created new announcement %{target}"
         create_custom_emoji: "%{name} uploaded new emoji %{target}"
+        create_domain_allow: "%{name} whitelisted domain %{target}"
         create_domain_block: "%{name} blocked domain %{target}"
         create_email_domain_block: "%{name} blacklisted e-mail domain %{target}"
         demote_user: "%{name} demoted user %{target}"
+        destroy_announcement: "%{name} deleted announcement %{target}"
         destroy_custom_emoji: "%{name} destroyed emoji %{target}"
+        destroy_domain_allow: "%{name} removed domain %{target} from whitelist"
         destroy_domain_block: "%{name} unblocked domain %{target}"
         destroy_email_domain_block: "%{name} whitelisted e-mail domain %{target}"
         destroy_status: "%{name} removed status by %{target}"
@@ -224,10 +226,26 @@ en:
         unassigned_report: "%{name} unassigned report %{target}"
         unsilence_account: "%{name} unsilenced %{target}'s account"
         unsuspend_account: "%{name} unsuspended %{target}'s account"
+        update_announcement: "%{name} updated announcement %{target}"
         update_custom_emoji: "%{name} updated emoji %{target}"
         update_status: "%{name} updated status by %{target}"
       deleted_status: "(deleted status)"
       title: Audit log
+    announcements:
+      destroyed_msg: Announcement successfully deleted!
+      edit:
+        title: Edit announcement
+      empty: No announcements found.
+      live: Live
+      new:
+        create: Create announcement
+        title: New announcement
+      published_msg: Announcement successfully published!
+      scheduled_for: Scheduled for %{time}
+      scheduled_msg: Announcement scheduled for publication!
+      title: Announcements
+      unpublished_msg: Announcement successfully unpublished!
+      updated_msg: Announcement successfully updated!
     custom_emojis:
       assign_category: Assign category
       by_domain: Domain
@@ -339,13 +357,11 @@ en:
       delete: Delete
       destroyed_msg: Successfully deleted e-mail domain from blacklist
       domain: Domain
+      empty: No e-mail domains currently blacklisted.
       new:
         create: Add domain
         title: New e-mail blacklist entry
       title: E-mail blacklist
-    followers:
-      back_to_account: Back To Account
-      title: "%{acct}'s Followers"
     instances:
       by_domain: Domain
       delivery_available: Delivery is available
@@ -374,14 +390,16 @@ en:
       title: Invites
     pending_accounts:
       title: Pending accounts (%{count})
+    relationships:
+      title: "%{acct}'s relationships"
     relays:
       add_new: Add new relay
       delete: Delete
-      description_html: A <strong>federation relay</strong> is an intermediary server that exchanges large volumes of public snoots between instances that subscribe and publish to it. <strong>It can help small and medium instances discover content from the fediverse</strong>, which would otherwise require local users manually following other people on remote instances.
+      description_html: A <strong>federation relay</strong> is an intermediary server that exchanges large volumes of public toots between servers that subscribe and publish to it. <strong>It can help small and medium servers discover content from the fediverse</strong>, which would otherwise require local users manually following other people on remote servers.
       disable: Disable
       disabled: Disabled
       enable: Enable
-      enable_hint: Once enabled, your instance will subscribe to all public snoots from this relay, and will begin sending this instance's public snoots to it.
+      enable_hint: Once enabled, your server will subscribe to all public toots from this relay, and will begin sending this server's public toots to it.
       enabled: Enabled
       inbox_url: Relay URL
       pending: Waiting for relay's approval
@@ -395,12 +413,17 @@ en:
       destroyed_msg: Report note successfully deleted!
     reports:
       account:
-        note: note
-        report: report
+        notes:
+          one: "%{count} note"
+          other: "%{count} notes"
+        reports:
+          one: "%{count} report"
+          other: "%{count} reports"
       action_taken_by: Action taken by
       are_you_sure: Are you sure?
       assign_to_self: Assign to me
       assigned: Assigned moderator
+      by_target_domain: Domain of reported account
       comment:
         none: None
       created_at: Reported
@@ -425,7 +448,7 @@ en:
       updated_at: Updated
     settings:
       activity_api_enabled:
-        desc_html: Counts of locally posted snoots, active users, and new registrations in weekly buckets
+        desc_html: Counts of locally posted statuses, active users, and new registrations in weekly buckets
         title: Publish aggregate statistics about user activity
       bootstrap_timeline_accounts:
         desc_html: Separate multiple usernames by comma. Only local and unlocked accounts will work. Default when empty is all local admins.
@@ -446,15 +469,17 @@ en:
         users: To logged-in local users
       domain_blocks_rationale:
         title: Show rationale
+      enable_bootstrap_timeline_accounts:
+        title: Enable default follows for new users
       hero:
-        desc_html: Displayed on the frontpage. At least 600x100px recommended. When not set, falls back to instance thumbnail
+        desc_html: Displayed on the frontpage. At least 600x100px recommended. When not set, falls back to server thumbnail
         title: Hero image
       mascot:
         desc_html: Displayed on multiple pages. At least 293×205px recommended. When not set, falls back to default mascot
         title: Mascot image
       peers_api_enabled:
-        desc_html: Domain names this instance has encountered in the fediverse
-        title: Publish list of discovered instances
+        desc_html: Domain names this server has encountered in the fediverse
+        title: Publish list of discovered servers
       preview_sensitive_media:
         desc_html: Link previews on other websites will display a thumbnail even if the media is marked as sensitive
         title: Show sensitive media in OpenGraph previews
@@ -484,24 +509,24 @@ en:
         desc_html: Show a staff badge on a user page
         title: Show staff badge
       site_description:
-        desc_html: Introductory paragraph on the API. Describe what makes this Mastodon instance special and anything else important. You can use HTML tags, in particular <code>&lt;a&gt;</code> and <code>&lt;em&gt;</code>.
-        title: Instance description
+        desc_html: Introductory paragraph on the API. Describe what makes this Mastodon server special and anything else important. You can use HTML tags, in particular <code>&lt;a&gt;</code> and <code>&lt;em&gt;</code>.
+        title: Server description
       site_description_extended:
-        desc_html: A good place for your code of conduct, rules, guidelines and other things that set your instance apart. You can use HTML tags
+        desc_html: A good place for your code of conduct, rules, guidelines and other things that set your server apart. You can use HTML tags
         title: Custom extended information
       site_short_description:
-        desc_html: Displayed in sidebar and meta tags. Describe what Mastodon is and what makes this instance special in a single paragraph.
-        title: Short instance description
+        desc_html: Displayed in sidebar and meta tags. Describe what Mastodon is and what makes this server special in a single paragraph.
+        title: Short server description
       site_terms:
         desc_html: You can write your own privacy policy, terms of service or other legalese. You can use HTML tags
         title: Custom terms of service
-      site_title: Instance name
+      site_title: Server name
       spam_check_enabled:
         desc_html: Mastodon can auto-report accounts that send repeated unsolicited messages. There may be false positives.
         title: Anti-spam automation
       thumbnail:
         desc_html: Used for previews via OpenGraph and API. 1200x630px recommended
-        title: Instance thumbnail
+        title: Server thumbnail
       timeline_preview:
         desc_html: Display link to public timeline on landing page and allow API access to the public timeline without authentication
         title: Allow unauthenticated access to public timeline
@@ -523,7 +548,7 @@ en:
       media:
         title: Media
       no_media: No media
-      no_status_selected: No snoots were changed as none were selected
+      no_status_selected: No statuses were changed as none were selected
       title: Account statuses
       with_media: With media
     tags:
@@ -574,7 +599,12 @@ en:
     animations_and_accessibility: Animations and accessibility
     confirmation_dialogs: Confirmation dialogs
     discovery: Discovery
+    localization:
+      body: Mastodon is translated by volunteers.
+      guide_link: https://crowdin.com/project/mastodon
+      guide_link_text: Everyone can contribute.
     sensitive_content: Sensitive content
+    toot_layout: Toot layout
   application_mailer:
     notification_preferences: Change e-mail preferences
     salutation: "%{name},"
@@ -593,14 +623,14 @@ en:
   auth:
     apply_for_account: Request an invite
     change_password: Password
-    checkbox_agreement_html: I agree to the <a href="%{rules_path}" target="_blank">instance rules</a> and <a href="%{terms_path}" target="_blank">terms of service</a>
+    checkbox_agreement_html: I agree to the <a href="%{rules_path}" target="_blank">server rules</a> and <a href="%{terms_path}" target="_blank">terms of service</a>
     checkbox_agreement_without_rules_html: I agree to the <a href="%{terms_path}" target="_blank">terms of service</a>
     delete_account: Delete account
     delete_account_html: If you wish to delete your account, you can <a href="%{path}">proceed here</a>. You will be asked for confirmation.
     description:
-      prefix_invited_by_user: "@%{name} invites you to join snouts.online!"
-      prefix_sign_up: Sign up on snouts.online today!
-      suffix: With an account, you will be able to follow people, post updates and exchange messages with users from any Fediverse instance and more!
+      prefix_invited_by_user: "@%{name} invites you to join this server of Mastodon!"
+      prefix_sign_up: Sign up on Mastodon today!
+      suffix: With an account, you will be able to follow people, post updates and exchange messages with users from any Mastodon server and more!
     didnt_get_confirmation: Didn't receive confirmation instructions?
     forgot_password: Forgot your password?
     invalid_reset_password_token: Password reset token is invalid or expired. Please request a new one.
@@ -631,6 +661,7 @@ en:
     trouble_logging_in: Trouble logging in?
   authorize_follow:
     already_following: You are already following this account
+    already_requested: You have already sent a follow request to that account
     error: Unfortunately, there was an error looking up the remote account
     follow: Follow
     follow_request: 'You have sent a follow request to:'
@@ -645,6 +676,9 @@ en:
     hint_html: "<strong>Tip:</strong> We won't ask you for your password again for the next hour."
     invalid_password: Invalid password
     prompt: Confirm password to continue
+  date:
+    formats:
+      default: "%b %d, %Y"
   datetime:
     distance_in_words:
       about_x_hours: "%{count}h"
@@ -667,7 +701,7 @@ en:
     success_msg: Your account was successfully deleted
     warning:
       before: 'Before proceeding, please read these notes carefully:'
-      caches: Content that has been cached by other instances may persist
+      caches: Content that has been cached by other servers may persist
       data_removal: Your posts and other data will be permanently removed
       email_change_html: You can <a href="%{path}">change your e-mail address</a> without deleting your account
       email_contact_html: If it still doesn't arrive, you can e-mail <a href="mailto:%{email}">%{email}</a> for help
@@ -696,7 +730,7 @@ en:
       content: We're sorry, but something went wrong on our end.
       title: This page is not correct
     '503': The page could not be served due to a temporary server failure.
-    noscript_html: To use snouts.online via the web, please enable JavaScript. Alternatively, try one of the <a href="%{apps_path}">native apps</a> for Mastodon for your platform.
+    noscript_html: To use the Mastodon web application, please enable JavaScript. Alternatively, try one of the <a href="%{apps_path}">native apps</a> for Mastodon for your platform.
   existing_username_validator:
     not_found: could not find a local user with that username
     not_found_multiple: could not find %{usernames}
@@ -704,14 +738,13 @@ en:
     archive_takeout:
       date: Date
       download: Download your archive
-      hint_html: You can request an archive of your <strong>snoots and uploaded media</strong>. The exported data will be in the ActivityPub format, readable by any compliant software. You can request an archive every 7 days.
+      hint_html: You can request an archive of your <strong>toots and uploaded media</strong>. The exported data will be in the ActivityPub format, readable by any compliant software. You can request an archive every 7 days.
       in_progress: Compiling your archive...
       request: Request your archive
       size: Size
     blocks: You block
     csv: CSV
     domain_blocks: Domain blocks
-    follows: You follow
     lists: Lists
     mutes: You mute
     storage: Media storage
@@ -722,6 +755,7 @@ en:
     hint_html: "<strong>What are featured hashtags?</strong> They are displayed prominently on your public profile and allow people to browse your public posts specifically under those hashtags. They are a great tool for keeping track of creative works or long-term projects."
   filters:
     contexts:
+      account: Profiles
       home: Home timeline
       notifications: Notifications
       public: Public timelines
@@ -733,6 +767,7 @@ en:
       invalid_irreversible: Irreversible filtering only works with home or notifications context
     index:
       delete: Delete
+      empty: You have no filters.
       title: Filters
     new:
       title: Add new filter
@@ -745,6 +780,7 @@ en:
     all: All
     changes_saved_msg: Changes successfully saved!
     copy: Copy
+    delete: Delete
     no_batch_actions_available: No batch actions available on this page
     order_by: Order by
     save_changes: Save changes
@@ -767,7 +803,7 @@ en:
     i_am_html: I am %{username} on %{service}.
     identity: Identity
     inactive: Inactive
-    publicize_checkbox: 'And snoot this:'
+    publicize_checkbox: 'And toot this:'
     publicize_toot: 'It is proven! I am %{username} on %{service}: %{url}'
     status: Verification status
     view_proof: View proof
@@ -777,7 +813,7 @@ en:
       merge_long: Keep existing records and add new ones
       overwrite: Overwrite
       overwrite_long: Replace current records with the new ones
-    preface: You can import data that you have exported from another instance, such as a list of the people you are following or blocking.
+    preface: You can import data that you have exported from another server, such as a list of the people you are following or blocking.
     success: Your data was successfully uploaded and will now be processed in due time
     types:
       blocking: Blocking list
@@ -803,7 +839,7 @@ en:
       one: 1 use
       other: "%{count} uses"
     max_uses_prompt: No limit
-    prompt: Generate and share links with others to grant access to this instance
+    prompt: Generate and share links with others to grant access to this server
     table:
       expires_at: Expires
       uses: Uses
@@ -813,7 +849,7 @@ en:
       limit: You have reached the maximum amount of lists
   media_attachments:
     validations:
-      images_and_video: Cannot attach a video to a snoot that already contains images
+      images_and_video: Cannot attach a video to a status that already contains images
       too_many: Cannot attach more than 4 files
   migrations:
     acct: Moved to
@@ -860,9 +896,9 @@ en:
         other: "%{count} new notifications since your last visit \U0001F418"
       title: In your absence...
     favourite:
-      body: 'Your snoot was liked by %{name}:'
-      subject: "%{name} liked your snoot"
-      title: New like
+      body: 'Your status was favourited by %{name}:'
+      subject: "%{name} favourited your status"
+      title: New favourite
     follow:
       body: "%{name} is now following you!"
       subject: "%{name} is now following you"
@@ -878,9 +914,13 @@ en:
       subject: You were mentioned by %{name}
       title: New mention
     reblog:
-      body: 'Your snoot was booped by %{name}:'
-      subject: "%{name} booped your snoot"
-      title: New boop
+      body: 'Your status was boosted by %{name}:'
+      subject: "%{name} boosted your status"
+      title: New boost
+  notifications:
+    email_events: Events for e-mail notifications
+    email_events_hint: 'Select events that you want to receive notifications for:'
+    other_settings: Other notifications settings
   number:
     human:
       decimal_units:
@@ -905,6 +945,7 @@ en:
       duration_too_long: is too far into the future
       duration_too_short: is too soon
       expired: The poll has already ended
+      invalid_choice: The chosen vote option does not exist
       over_character_limit: cannot be longer than %{max} characters each
       too_few_options: must have more than one item
       too_many_options: can't contain more than %{max} items
@@ -912,9 +953,16 @@ en:
     other: Other
     posting_defaults: Posting defaults
     public_timelines: Public timelines
+  reactions:
+    errors:
+      limit_reached: Limit of different reactions reached
+      unrecognized_emoji: is not a recognized emoji
   relationships:
     activity: Account activity
     dormant: Dormant
+    followers: Followers
+    following: Following
+    invited: Invited
     last_active: Last active
     most_recent: Most recent
     moved: Moved
@@ -931,20 +979,20 @@ en:
     no_account_html: Don't have an account? You can <a href='%{sign_up_path}' target='_blank'>sign up here</a>
     proceed: Proceed to follow
     prompt: 'You are going to follow:'
-    reason_html: "<strong>Why is this step necessary?</strong> <code>%{instance}</code> might not be the instance where you are registered, so we need to redirect you to your home instance first."
+    reason_html: "<strong>Why is this step necessary?</strong> <code>%{instance}</code> might not be the server where you are registered, so we need to redirect you to your home server first."
   remote_interaction:
     favourite:
-      proceed: Proceed to like
-      prompt: 'You want to like this snoot:'
+      proceed: Proceed to favourite
+      prompt: 'You want to favourite this toot:'
     reblog:
-      proceed: Proceed to boop
-      prompt: 'You want to boop this snoot:'
+      proceed: Proceed to boost
+      prompt: 'You want to boost this toot:'
     reply:
       proceed: Proceed to reply
-      prompt: 'You want to reply to this snoot:'
+      prompt: 'You want to reply to this toot:'
   scheduled_statuses:
-    over_daily_limit: You have exceeded the limit of %{limit} scheduled snoots for that day
-    over_total_limit: You have exceeded the limit of %{limit} scheduled snoots
+    over_daily_limit: You have exceeded the limit of %{limit} scheduled toots for that day
+    over_total_limit: You have exceeded the limit of %{limit} scheduled toots
     too_soon: The scheduled date must be in the future
   sessions:
     activity: Last activity
@@ -969,7 +1017,7 @@ en:
       weibo: Weibo
     current_session: Current session
     description: "%{browser} on %{platform}"
-    explanation: These are the web browsers currently logged in to your snouts.online account.
+    explanation: These are the web browsers currently logged in to your Mastodon account.
     ip: IP
     platforms:
       adobe_air: Adobe Air
@@ -979,7 +1027,7 @@ en:
       firefox_os: Firefox OS
       ios: iOS
       linux: Linux
-      mac: Mac
+      mac: macOS
       other: unknown platform
       windows: Windows
       windows_mobile: Windows Mobile
@@ -993,7 +1041,7 @@ en:
     aliases: Account aliases
     appearance: Appearance
     authorized_apps: Authorized apps
-    back: Back to snouts.online
+    back: Back to Mastodon
     delete: Account deletion
     development: Development
     edit_profile: Edit profile
@@ -1028,10 +1076,10 @@ en:
     open_in_web: Open in web
     over_character_limit: character limit of %{max} exceeded
     pin_errors:
-      limit: You have already pinned the maximum number of snoots
-      ownership: Someone else's snoot cannot be pinned
-      private: Non-public snoot cannot be pinned
-      reblog: A boop cannot be pinned
+      limit: You have already pinned the maximum number of toots
+      ownership: Someone else's toot cannot be pinned
+      private: Non-public toot cannot be pinned
+      reblog: A boost cannot be pinned
     poll:
       total_people:
         one: "%{count} person"
@@ -1041,6 +1089,7 @@ en:
         other: "%{count} votes"
       vote: Vote
     show_more: Show more
+    show_thread: Show thread
     sign_in_to_participate: Sign in to participate in the conversation
     title: '%{name}: "%{quote}"'
     visibilities:
@@ -1051,8 +1100,8 @@ en:
       unlisted: Unlisted
       unlisted_long: Everyone can see, but not listed on public timelines
   stream_entries:
-    pinned: Pinned snoot
-    reblogged: booped
+    pinned: Pinned toot
+    reblogged: boosted
     sensitive_content: Sensitive content
   tags:
     does_not_match_previous_name: does not match the previous name
@@ -1062,9 +1111,9 @@ en:
       <h3 id="collect">What information do we collect?</h3>
 
       <ul>
-        <li><em>Basic account information</em>: If you register on this instance, you may be asked to enter a username, an e-mail address and a password. You may also enter additional profile information such as a display name and biography, and upload a profile picture and header image. The username, display name, biography, profile picture and header image are always listed publicly.</li>
-        <li><em>Posts, following and other public information</em>: The list of people you follow is listed publicly, the same is true for your followers. When you submit a message, the date and time is stored as well as the application you submitted the message from. Messages may contain media attachments, such as pictures and videos. Public and unlisted posts are available publicly. When you feature a post on your profile, that is also publicly available information. Your posts are delivered to your followers, in some cases it means they are delivered to different instances and copies are stored there. When you delete posts, this is likewise delivered to your followers. The action of reblogging or favouriting another post is always public.</li>
-        <li><em>Direct and followers-only posts</em>: All posts are stored and processed on the instance. Followers-only posts are delivered to your followers and users who are mentioned in them, and direct posts are delivered only to users mentioned in them. In some cases it means they are delivered to different instances and copies are stored there. We make a good faith effort to limit the access to those posts only to authorized persons, but other instances may fail to do so. Therefore it's important to review instances your followers belong to. You may toggle an option to approve and reject new followers manually in the settings. <em>Please keep in mind that the operators of the instance and any receiving instance may view such messages</em>, and that recipients may screenshot, copy or otherwise re-share them. <em>Do not share any dangerous information over snouts.online.</em></li>
+        <li><em>Basic account information</em>: If you register on this server, you may be asked to enter a username, an e-mail address and a password. You may also enter additional profile information such as a display name and biography, and upload a profile picture and header image. The username, display name, biography, profile picture and header image are always listed publicly.</li>
+        <li><em>Posts, following and other public information</em>: The list of people you follow is listed publicly, the same is true for your followers. When you submit a message, the date and time is stored as well as the application you submitted the message from. Messages may contain media attachments, such as pictures and videos. Public and unlisted posts are available publicly. When you feature a post on your profile, that is also publicly available information. Your posts are delivered to your followers, in some cases it means they are delivered to different servers and copies are stored there. When you delete posts, this is likewise delivered to your followers. The action of reblogging or favouriting another post is always public.</li>
+        <li><em>Direct and followers-only posts</em>: All posts are stored and processed on the server. Followers-only posts are delivered to your followers and users who are mentioned in them, and direct posts are delivered only to users mentioned in them. In some cases it means they are delivered to different servers and copies are stored there. We make a good faith effort to limit the access to those posts only to authorized persons, but other servers may fail to do so. Therefore it's important to review servers your followers belong to. You may toggle an option to approve and reject new followers manually in the settings. <em>Please keep in mind that the operators of the server and any receiving server may view such messages</em>, and that recipients may screenshot, copy or otherwise re-share them. <em>Do not share any dangerous information over Mastodon.</em></li>
         <li><em>IPs and other metadata</em>: When you log in, we record the IP address you log in from, as well as the name of your browser application. All the logged in sessions are available for your review and revocation in the settings. The latest IP address used is stored for up to 12 months. We also may retain server logs which include the IP address of every request to our server.</li>
       </ul>
 
@@ -1075,7 +1124,7 @@ en:
       <p>Any of the information we collect from you may be used in the following ways:</p>
 
       <ul>
-        <li>To provide the core functionality of snouts.online. You can only interact with other people's content and post your own content when you are logged in. For example, you may follow other people to view their combined posts in your own personalized home timeline.</li>
+        <li>To provide the core functionality of Mastodon. You can only interact with other people's content and post your own content when you are logged in. For example, you may follow other people to view their combined posts in your own personalized home timeline.</li>
         <li>To aid moderation of the community, for example comparing your IP address with other known ones to determine ban evasion or other violations.</li>
         <li>The email address you provide may be used to send you information, notifications about other people interacting with your content or sending you messages, and to respond to inquiries, and/or other requests or questions.</li>
       </ul>
@@ -1115,9 +1164,9 @@ en:
 
       <p>We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information. This does not include trusted third parties who assist us in operating our site, conducting our business, or servicing you, so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policies, or protect ours or others rights, property, or safety.</p>
 
-      <p>Your public content may be downloaded by other instances in the network. Your public and followers-only posts are delivered to the instances where your followers reside, and direct messages are delivered to the instances of the recipients, in so far as those followers or recipients reside on a different instance than this.</p>
+      <p>Your public content may be downloaded by other servers in the network. Your public and followers-only posts are delivered to the servers where your followers reside, and direct messages are delivered to the servers of the recipients, in so far as those followers or recipients reside on a different server than this.</p>
 
-      <p>When you authorize an application to use your account, depending on the scope of permissions you approve, it may access your public profile information, your following list, your followers, your lists, all your posts, and your likes. Applications can never access your e-mail address or password.</p>
+      <p>When you authorize an application to use your account, depending on the scope of permissions you approve, it may access your public profile information, your following list, your followers, your lists, all your posts, and your favourites. Applications can never access your e-mail address or password.</p>
 
       <hr class="spacer" />
 
@@ -1140,10 +1189,9 @@ en:
       <p>Originally adapted from the <a href="https://github.com/discourse/discourse">Discourse privacy policy</a>.</p>
     title: "%{instance} Terms of Service and Privacy Policy"
   themes:
-    default: Snouts
-    mastodon: Mastodon
-    mastodon-light: Mastodon (light)
-    contrast: Mastodon (high contrast)
+    contrast: Mastodon (High contrast)
+    default: Mastodon (Dark)
+    mastodon-light: Mastodon (Light)
   time:
     formats:
       default: "%b %d, %Y, %H:%M"
@@ -1166,16 +1214,16 @@ en:
     wrong_code: The entered code was invalid! Are server time and device time correct?
   user_mailer:
     backup_ready:
-      explanation: You requested a full backup of your snouts.online account. It's now ready for download!
+      explanation: You requested a full backup of your Mastodon account. It's now ready for download!
       subject: Your archive is ready for download
       title: Archive takeout
     warning:
       explanation:
         disable: While your account is frozen, your account data remains intact, but you cannot perform any actions until it is unlocked.
-        silence: While your account is limited, only people who are already following you will see your snoots on this instance, and you may be excluded from various public listings. However, others may still manually follow you.
-        suspend: Your account has been suspended, and all of your snoots and your uploaded media files have been irreversibly removed from this instance, and instances where you had followers.
+        silence: While your account is limited, only people who are already following you will see your toots on this server, and you may be excluded from various public listings. However, others may still manually follow you.
+        suspend: Your account has been suspended, and all of your toots and your uploaded media files have been irreversibly removed from this server, and servers where you had followers.
       get_in_touch: You can reply to this e-mail to get in touch with the staff of %{instance}.
-      review_server_policies: Review instance policies
+      review_server_policies: Review server policies
       statuses: 'Specifically, for:'
       subject:
         disable: Your account %{acct} has been frozen
@@ -1194,14 +1242,14 @@ en:
       final_action: Start posting
       final_step: 'Start posting! Even without followers your public messages may be seen by others, for example on the local timeline and in hashtags. You may want to introduce yourself on the #introductions hashtag.'
       full_handle: Your full handle
-      full_handle_hint: This is what you would tell your friends so they can message or follow you from another instance.
+      full_handle_hint: This is what you would tell your friends so they can message or follow you from another server.
       review_preferences_action: Change preferences
       review_preferences_step: Make sure to set your preferences, such as which emails you'd like to receive, or what privacy level you’d like your posts to default to. If you don’t have motion sickness, you could choose to enable GIF autoplay.
-      subject: Welcome to snouts.online
-      tip_federated_timeline: The federated timeline is a firehose view of the Fediverse. But it only includes people your neighbours are subscribed to, so it's not complete.
-      tip_following: You follow your instance's admin(s) by default. To find more interesting people, check the local and federated timelines.
-      tip_local_timeline: The Snouts timeline is a feed of everyone on snouts.online! This is where the magic happens!
-      tip_mobile_webapp: If your mobile browser offers you to add snouts.online to your homescreen, you can receive push notifications. It acts like a native app in many ways!
+      subject: Welcome to Mastodon
+      tip_federated_timeline: The federated timeline is a firehose view of the Mastodon network. But it only includes people your neighbours are subscribed to, so it's not complete.
+      tip_following: You follow your server's admin(s) by default. To find more interesting people, check the local and federated timelines.
+      tip_local_timeline: The local timeline is a firehose view of people on %{instance}. These are your immediate neighbours!
+      tip_mobile_webapp: If your mobile browser offers you to add Mastodon to your homescreen, you can receive push notifications. It acts like a native app in many ways!
       tips: Tips
       title: Welcome aboard, %{name}!
   users:
@@ -1212,5 +1260,5 @@ en:
     seamless_external_login: You are logged in via an external service, so password and e-mail settings are not available.
     signed_in_as: 'Signed in as:'
   verification:
-    explanation_html: 'You can <strong>verify yourself as the owner of the links in your profile metadata</strong>. For that, the linked website must contain a link back to your snouts.online profile. The link back <strong>must</strong> have a <code>rel="me"</code> attribute. The text content of the link does not matter. Here is an example:'
+    explanation_html: 'You can <strong>verify yourself as the owner of the links in your profile metadata</strong>. For that, the linked website must contain a link back to your Mastodon profile. The link back <strong>must</strong> have a <code>rel="me"</code> attribute. The text content of the link does not matter. Here is an example:'
     verification: Verification
