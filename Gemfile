@@ -85,7 +85,7 @@ gem 'strong_migrations', '~> 0.3'
 gem 'tty-command', '~> 0.8', require: false
 gem 'tty-prompt', '~> 0.18', require: false
 gem 'twitter-text', '~> 1.14'
-gem 'tzinfo-data', '~> 1.2018'
+gem 'tzinfo-data', '~> 1.2020'
 gem 'webpacker', '~> 3.5'
 gem 'webpush'
 
