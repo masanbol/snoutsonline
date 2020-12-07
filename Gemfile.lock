@@ -524,7 +524,7 @@ GEM
     rspec-sidekiq (3.0.3)
       rspec-core (~> 3.0, >= 3.0.0)
       sidekiq (>= 2.4.0)
-    rspec-support (3.8.0)
+    rspec-support (3.8.3)
     rubocop (0.63.1)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
