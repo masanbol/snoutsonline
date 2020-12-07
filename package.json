@@ -127,7 +127,7 @@
     "throng": "^4.0.0",
     "tiny-queue": "^0.2.1",
     "uglifyjs-webpack-plugin": "^2.1.1",
-    "uuid": "^3.1.0",
+    "uuid": "^8.3.1",
     "uws": "10.148.0",
     "webpack": "^4.28.3",
     "webpack-assets-manifest": "^3.1.1",
