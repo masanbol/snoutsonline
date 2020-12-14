@@ -133,7 +133,7 @@ group :development do
   gem 'scss_lint', '~> 0.57', require: false
 
   gem 'capistrano', '~> 3.11'
-  gem 'capistrano-rails', '~> 1.4'
+  gem 'capistrano-rails', '~> 1.6'
   gem 'capistrano-rbenv', '~> 2.1'
   gem 'capistrano-yarn', '~> 2.0'
 
